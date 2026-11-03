@@ -1,0 +1,4 @@
+printf '#!/bin/sh\necho hello world\n#%0197d\n' 0 | tr '0' 'x' > hello.sh
+chmod +x hello.sh
+wc -c hello.sh
+./hello.sh
